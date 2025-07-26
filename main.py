@@ -4,6 +4,9 @@ from fastapi.responses import JSONResponse
 from azure.storage.blob import BlobServiceClient
 from app.auth import get_api_key
 import os
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("Starting FastAPI app")
 
 app = FastAPI()
 
