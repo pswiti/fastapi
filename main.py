@@ -2,7 +2,7 @@ import uuid
 from fastapi import FastAPI, File, UploadFile, Depends
 from fastapi.responses import JSONResponse
 from azure.storage.blob import BlobServiceClient
-from app.auth import get_api_key
+from auth import get_api_key
 import os
 import logging
 logging.basicConfig(level=logging.INFO)
