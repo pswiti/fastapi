@@ -9,6 +9,9 @@ logging.basicConfig(level=logging.INFO)
 logging.info("Starting FastAPI app")
 
 app = FastAPI()
+@app.get("/")
+def health_check():
+    return {"status": "running"}
 
 AZURE_STORAGE_CONNECTION_STRING = os.environ["AZURE_STORAGE_CONNECTION_STRING"]
 CONTAINER_NAME = "fastapi"
